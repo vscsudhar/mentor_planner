@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:mentor_planner/app/app.bottomsheets.dart';
-import 'package:mentor_planner/app/app.dialogs.dart';
-import 'package:mentor_planner/app/app.locator.dart';
-import 'package:mentor_planner/app/app.router.dart';
-import 'package:stacked_services/stacked_services.dart';
+import 'package:mentor_planner/view/home.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await setupLocator();
-  setupDialogUi();
-  setupBottomSheetUi();
-  runApp(const MainApp());
+void main() {
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.startupView,
-      onGenerateRoute: StackedRouter().onGenerateRoute,
-      navigatorKey: StackedService.navigatorKey,
-      navigatorObservers: [StackedService.routeObserver],
+      theme: ThemeData(
+      
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const HomeView(),
     );
   }
 }
