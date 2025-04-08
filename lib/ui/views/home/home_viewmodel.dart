@@ -18,8 +18,11 @@ class HomeViewModel extends BaseViewModel {
 
   double premium = 40;
   double free = 54;
+  double virtual = 36;
+  double physical = 50;
 
   double get total => premium + free;
+  double get totalMode => virtual + physical;
 
   late Color selectedColorItem = const Color.fromARGB(255, 8, 67, 119);
   Color unSelectedColorItem = Colors.black;

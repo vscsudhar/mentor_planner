@@ -59,9 +59,14 @@ class ProgramTypeMatricsPieChart extends StatelessWidget {
                       decoration: BoxDecoration(color: Colors.blueAccent.withOpacity(.2), borderRadius: BorderRadius.circular(3)),
                       child: Padding(
                         padding: defaultPadding4 + leftPadding4 + rightPadding4,
-                        child: Text(
-                          'View All',
-                          style: fontFamilyLight.size10,
+                        child:  Row(
+                          children: [
+                            Text(
+                              'Month',
+                              style: fontFamilyLight.size10,
+                            ),
+                            Icon(Icons.keyboard_arrow_down,size: 17,)
+                          ],
                         ),
                       ),
                     )
@@ -84,13 +89,13 @@ class ProgramTypeMatricsPieChart extends StatelessWidget {
                           sections: [
                             PieChartSectionData(
                               color: const Color.fromARGB(255, 15, 73, 174),
-                              value: 60,
+                              value: viewModel.premium,
                               title: '',
                               radius: 30,
                             ),
                             PieChartSectionData(
-                              color: Color.fromARGB(255, 115, 145, 192).withOpacity(.5),
-                              value: 40,
+                              color: Color.fromARGB(255, 223, 180, 10),
+                              value: viewModel.free,
                               title: '',
                               radius: 30,
                             ),
@@ -126,7 +131,7 @@ class ProgramTypeMatricsPieChart extends StatelessWidget {
                         ),
                         horizontalSpacing10,
                         Text(
-                          'Premium',
+                          'Premium  ${viewModel.premium}'.replaceAll('.0', ''),
                           style: fontFamilyMedium.size12,
                         )
                       ],
@@ -143,7 +148,7 @@ class ProgramTypeMatricsPieChart extends StatelessWidget {
                         ),
                         horizontalSpacing10,
                         Text(
-                          'Free',
+                          'Free  ${viewModel.free}'.replaceAll('.0', ''),
                           style: fontFamilyMedium.size12,
                         )
                       ],

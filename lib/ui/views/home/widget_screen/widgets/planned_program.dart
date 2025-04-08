@@ -15,7 +15,7 @@ class PlannedProgram extends StatelessWidget {
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, viewModel, child) {
         return Container(
-          height: 250,
+          height: 281,
           width: viewModel.getResponsiveWidth(context),
           color: Colors.white,
           child: Padding(
@@ -59,7 +59,8 @@ class PlannedProgram extends StatelessWidget {
                 ),
                 verticalSpacing8,
                 horizontalDivider1,
-                verticalSpacing10,
+                verticalSpacing16,
+                verticalSpacing8,
                 Row(
                   children: [
                     Container(
@@ -82,7 +83,7 @@ class PlannedProgram extends StatelessWidget {
                     )
                   ],
                 ),
-                verticalSpacing10,
+                verticalSpacing16,
                 Row(
                   children: [
                     Container(
@@ -105,7 +106,7 @@ class PlannedProgram extends StatelessWidget {
                     )
                   ],
                 ),
-                verticalSpacing10,
+                verticalSpacing16,
                 Row(
                   children: [
                     Container(

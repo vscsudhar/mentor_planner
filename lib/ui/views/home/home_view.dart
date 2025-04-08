@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:mentor_planner/ui/common/shared/styles.dart';
 import 'package:mentor_planner/ui/common/shared/text_style_helpers.dart';
 import 'package:mentor_planner/ui/views/home/widget_screen/dash_board_widget.dart';
+import 'package:mentor_planner/ui/views/home/widget_screen/programs_widget.dart';
+import 'package:mentor_planner/ui/views/home/widget_screen/widgets/right_side_drawer.dart';
 import 'package:stacked/stacked.dart';
 
 import 'home_viewmodel.dart';
@@ -13,7 +15,7 @@ class HomeView extends StackedView<HomeViewModel> {
   @override
   Widget builder(BuildContext context, HomeViewModel viewModel, Widget? child) {
     return Scaffold(
-      backgroundColor: backGroundColor,
+      backgroundColor: backGroundIconColor,
       appBar: AppBar(
         backgroundColor: appwhite1,
         leading: Padding(
@@ -33,31 +35,32 @@ class HomeView extends StackedView<HomeViewModel> {
         ),
         actions: [
           Padding(
-            padding: topPadding10+rightPadding8+bottomPadding10,
+            padding: topPadding10 + rightPadding8 + bottomPadding10,
             child: Container(
               height: 27,
               width: 27,
-              decoration: BoxDecoration(
-                color: backGroundIconColor,
-                borderRadius: BorderRadius.circular(5)
-              ),
-              child: IconButton(onPressed: () {
-                
-              }, icon: Icon(CupertinoIcons.search,size: 15,)),
+              decoration: BoxDecoration(color: backGroundIconColor, borderRadius: BorderRadius.circular(5)),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    CupertinoIcons.search,
+                    size: 15,
+                  )),
             ),
           ),
           Padding(
-            padding:bottomPadding10+rightPadding8 +topPadding10 ,
+            padding: bottomPadding10 + rightPadding8 + topPadding10,
             child: Container(
-               height: 27,
-                width: 27,
-                decoration: BoxDecoration(
-                  color: backGroundIconColor,
-                  borderRadius: BorderRadius.circular(5)
-                ),
+              height: 27,
+              width: 27,
+              decoration: BoxDecoration(color: backGroundIconColor, borderRadius: BorderRadius.circular(5)),
               child: Stack(
                 children: [
-                  Center(child: Icon(Icons.notifications_none,size: 15,)), // your main notification icon
+                  Center(
+                      child: Icon(
+                    Icons.notifications_none,
+                    size: 15,
+                  )), // your main notification icon
                   Positioned(
                     right: 5,
                     top: 3,
@@ -65,41 +68,51 @@ class HomeView extends StackedView<HomeViewModel> {
                       width: 6,
                       height: 6,
                       decoration: BoxDecoration(
-              color: Colors.red,
-              shape: BoxShape.circle,
+                        color: Colors.red,
+                        shape: BoxShape.circle,
                       ),
                     ),
                   ),
-                  
                 ],
               ),
             ),
           ),
-          Padding(padding: bottomPadding10+topPadding10+rightPadding8,
+          Builder(
+            builder: (context) {
+              return Padding(
+                padding: bottomPadding10 + topPadding10 + rightPadding8,
+                child: GestureDetector(
+                  onTap: () {
+                    Scaffold.of(context).openEndDrawer(); // ✅ Safe here
+                  },
                   child: Container(
                     height: 27,
                     width: 27,
                     decoration: BoxDecoration(
                       color: backGroundIconColor,
                       borderRadius: BorderRadius.circular(5),
-                      
                     ),
-                    child: Icon(Icons.menu,size: 16,),
+                    child: const Icon(Icons.menu, size: 16),
                   ),
-                  )
-
+                ),
+              );
+            },
+          ),
         ],
       ),
+      endDrawer: RightSideDrawer(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: defaultPadding10,
-              child: Column(
-                children: [
-                  DashBoardWidget(),
-                ],
-              ),
-                ),
+            child: Column(
+              children: [
+                viewModel.index == 0 ?
+                DashBoardWidget():
+                ProgramsWidget(),
+              ],
+            ),
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
