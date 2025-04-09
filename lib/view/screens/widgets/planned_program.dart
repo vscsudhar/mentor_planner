@@ -40,7 +40,7 @@ class PlannedProgram extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      decoration: BoxDecoration(color: Colors.blueAccent.withOpacity(.2), borderRadius: BorderRadius.circular(3)),
+                      decoration: BoxDecoration(color: Color(0xffdfedff), borderRadius: BorderRadius.circular(3)),
                       child: Padding(
                         padding: defaultPadding4 + leftPadding4 + rightPadding4,
                         child: Text(
@@ -62,7 +62,8 @@ class PlannedProgram extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.amberAccent.withOpacity(.2),
+                        color: Color(0xfffff4de)
+                        // color: Colors.amberAccent.withOpacity(.2),
                       ),
                       child: Center(
                           child: Text(
@@ -85,7 +86,8 @@ class PlannedProgram extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.greenAccent.withOpacity(.2),
+                        color: Color(0xffc9f7f5),
+                        // color: Colors.greenAccent.withOpacity(.2),
                       ),
                       child: Center(
                           child: Text(
@@ -108,7 +110,8 @@ class PlannedProgram extends StatelessWidget {
                       width: 50,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.purpleAccent.withOpacity(.2),
+                        color: Color(0xffeee5ff),
+                        // color: Colors.purpleAccent.withOpacity(.2),
                       ),
                       child: Center(
                           child: Text(

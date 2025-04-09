@@ -55,7 +55,7 @@ class ProgramModeMetricsPieChart extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      decoration: BoxDecoration(color: Colors.blueAccent.withOpacity(.2), borderRadius: BorderRadius.circular(3)),
+                      decoration: BoxDecoration(color: Color(0xffdfedff), borderRadius: BorderRadius.circular(3)),
                       child: Padding(
                         padding: defaultPadding4 + leftPadding4 + rightPadding4,
                         child:  Row(
@@ -93,7 +93,7 @@ class ProgramModeMetricsPieChart extends StatelessWidget {
                               radius: 30,
                             ),
                             PieChartSectionData(
-                              color: const Color.fromARGB(255, 15, 73, 174),
+                              color: const Color(0xff1954bf),
                               value: virtual,
                               title: '',
                               radius: 30,
@@ -109,7 +109,7 @@ class ProgramModeMetricsPieChart extends StatelessWidget {
                             style: fontFamilyMedium.size14,
                           ),
                           Text(
-                            "${totalMode}",
+                            "${totalMode}".replaceAll('.0', ''),
                             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                         ],
@@ -126,9 +126,9 @@ class ProgramModeMetricsPieChart extends StatelessWidget {
                         Container(
                           height: 10,
                           width: 10,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Color.fromARGB(255, 15, 73, 174),
+                            color: Color(0xff1954bf),
                           ),
                         ),
                         horizontalSpacing10,
@@ -143,7 +143,7 @@ class ProgramModeMetricsPieChart extends StatelessWidget {
                         Container(
                           height: 10,
                           width: 10,
-                          decoration: BoxDecoration(shape: BoxShape.circle, color: Color.fromARGB(255, 115, 145, 192).withOpacity(.5)),
+                          decoration: const BoxDecoration(shape: BoxShape.circle, color: Color(0xffd4e6ff)),
                         ),
                         horizontalSpacing10,
                         Text(

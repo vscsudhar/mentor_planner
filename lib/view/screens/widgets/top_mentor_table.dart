@@ -52,7 +52,7 @@ class TopMentorTable extends StatelessWidget {
                           ],
                         ),
                         Container(
-                          decoration: BoxDecoration(color: Colors.blueAccent.withOpacity(.2), borderRadius: BorderRadius.circular(3)),
+                          decoration: BoxDecoration(color: Color(0xffdfedff), borderRadius: BorderRadius.circular(3)),
                           child: Padding(
                             padding: defaultPadding4 + leftPadding4 + rightPadding4,
                             child: Text(
@@ -72,26 +72,26 @@ class TopMentorTable extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: DataTable(
                                         headingRowColor: MaterialStateProperty.resolveWith(
-                                          (states) => Colors.blue.shade100,
+                                          (states) => Color(0xffd9e4f2),
                                         ),
                                         headingRowHeight: 40,
                                         dataTextStyle: fontFamilyMedium.size12,
                                         columns: const [
                                           DataColumn(
                                             label: Text('Mentor Nmae',
-                          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold)),
+                          style: TextStyle( fontWeight: FontWeight.bold)),
                                           ),
                                           DataColumn(
                                             label: Text('Program',
-                          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold)),
+                          style: TextStyle(fontWeight: FontWeight.bold)),
                                           ),
                                           DataColumn(
                                             label: Text('Email',
-                          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold)),
+                          style: TextStyle( fontWeight: FontWeight.bold)),
                                           ),
                                           DataColumn(
                                             label: Text('Rating',
-                          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold)),
+                          style: TextStyle(fontWeight: FontWeight.bold)),
                                           ),
                                         ],
                                         rows: mentorList

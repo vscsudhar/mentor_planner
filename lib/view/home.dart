@@ -29,14 +29,15 @@ class _HomeViewState extends State<HomeView> {
         leading: Padding(
           padding: defaultPadding8 + leftPadding8,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               color: selectedColorItem,
             ),
-            child: Padding(
+            child: const Padding(
               padding: defaultPadding3,
               child: CircleAvatar(
-                child: Icon(Icons.person),
+                backgroundImage: NetworkImage('https://s3-alpha-sig.figma.com/img/7eda/76b9/148577323408b43e8a1f622abc9c02e5?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CNUuejzmmtNV9vnuANF2Wzuq5-jl-osYiGwJUsOVOk-EClw8Ye55-EpZFiBca~~X6ONCiND9aQjSGP~NaMMxdEre0xU73zEnIsspaMonPAaCELlYjbYT1LRzUdYZ3tKNDJuHomt4uF4kHVqnS8W8KV6sj7rcBJVmRvLKpffL6CbUxWp48If0TGquQR9xTaGtDMCnb0bDY-Ho4LwDGBVWozsgHE79ycnujQU9CL~7Gg1TWBmzNRjtcdzWwE90JbC7JsBkjgCzcgfZEiWZCktaPSdaXrUDgMO~eIKIYNMKpZ3gYZmTWal9FPCSH3zAtyVY4IYz1848OnoydeEaW3OUmw__'),
+                // child: Icon(Icons.person),
               ),
             ),
           ),
@@ -50,8 +51,9 @@ class _HomeViewState extends State<HomeView> {
               decoration: BoxDecoration(color: backGroundIconColor, borderRadius: BorderRadius.circular(5)),
               child: IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     CupertinoIcons.search,
+                    color: Color(0xfff00aebd),
                     size: 15,
                   )),
             ),
@@ -66,7 +68,8 @@ class _HomeViewState extends State<HomeView> {
                 children: [
                   Center(
                       child: Icon(
-                    Icons.notifications_none,
+                    Icons.notifications,
+                    color: Color(0xfff00aebd),
                     size: 15,
                   )), // your main notification icon
                   Positioned(
@@ -100,7 +103,7 @@ class _HomeViewState extends State<HomeView> {
                       color: backGroundIconColor,
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const Icon(Icons.menu, size: 16),
+                    child: const Icon(Icons.menu, size: 16,color: Color(0xfff00aebd),),
                   ),
                 ),
               );

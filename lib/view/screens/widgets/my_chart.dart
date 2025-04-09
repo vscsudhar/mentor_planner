@@ -15,25 +15,25 @@ class MyChart extends StatelessWidget {
     BarChartGroupData(
       x: 1,
       barRods: [
-        BarChartRodData(toY: 8, color: const Color.fromARGB(255, 177, 198, 233).withOpacity(.8), borderRadius: BorderRadius.zero),
-        BarChartRodData(toY: 5.5, color: const Color.fromARGB(255, 115, 145, 192), borderRadius: BorderRadius.zero),
-        BarChartRodData(toY: 27, color: const Color.fromARGB(255, 7, 97, 170), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 8, color: const Color(0xffc7deff), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 5.5, color: const Color(0xff7e9fd4), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 27, color: const Color(0xff1d5bbf), borderRadius: BorderRadius.zero),
       ],
     ),
     BarChartGroupData(
       x: 2,
       barRods: [
-        BarChartRodData(toY: 27, color: const Color.fromARGB(255, 177, 198, 233).withOpacity(.8), borderRadius: BorderRadius.zero),
-        BarChartRodData(toY: 45, color: const Color.fromARGB(255, 115, 145, 192), borderRadius: BorderRadius.zero),
-        BarChartRodData(toY: 45, color: const Color.fromARGB(255, 7, 97, 170), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 27, color: const Color(0xffc7deff), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 45, color: const Color(0xff7e9fd4), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 45, color: const Color(0xff1d5bbf), borderRadius: BorderRadius.zero),
       ],
     ),
     BarChartGroupData(
       x: 3,
       barRods: [
-        BarChartRodData(toY: 65, color: const Color.fromARGB(255, 177, 198, 233).withOpacity(.8), borderRadius: BorderRadius.zero),
-        BarChartRodData(toY: 28, color: const Color.fromARGB(255, 115, 145, 192), borderRadius: BorderRadius.zero),
-        BarChartRodData(toY: 64, color: const Color.fromARGB(255, 7, 97, 170), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 65, color: const Color(0xffc7deff), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 28, color: const Color(0xff7e9fd4), borderRadius: BorderRadius.zero),
+        BarChartRodData(toY: 64, color: const Color(0xff1d5bbf), borderRadius: BorderRadius.zero),
       ],
     ),
   ];
@@ -68,7 +68,7 @@ class MyChart extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      decoration: BoxDecoration(color: Colors.blueAccent.withOpacity(.2), borderRadius: BorderRadius.circular(3)),
+                      decoration: BoxDecoration(color: Color(0xffdfedff), borderRadius: BorderRadius.circular(3)),
                       child: Padding(
                         padding: defaultPadding4 + leftPadding4 + rightPadding4,
                         child: Row(
